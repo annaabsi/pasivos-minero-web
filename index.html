@@ -39,11 +39,16 @@
   <link href="css/style.css" rel="stylesheet">
 
   <script defer src="https://www.googletagmanager.com/gtag/js?id=UA-6536106-1"></script>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-31136041-1"></script>
-
   <script defer>
     function gtag() { dataLayer.push(arguments); }
     (window.dataLayer = window.dataLayer || []), gtag("js", new Date()), gtag("config", "UA-6536106-1");
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-31136041-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments)};
+    gtag('js', new Date());
+    gtag('config', 'UA-31136041-1');
   </script>
   <style>
     @font-face {
@@ -520,25 +525,25 @@
 <body cz-shortcut-listen="true">
   <header id="w-header" class="">
     <iframe width="100%" height="1" src="https://www.connectas.org/RECURSOS/pasivos-ambientales.html" frameborder="0"
-    scrolling="0"
-    style="width:100%;padding: 0;margin: 0;height: 1px;min-height: 1px;display: block; background-color: #fff; opacity: 0;"></iframe>
+      scrolling="0"
+      style="width:100%;padding: 0;margin: 0;height: 1px;min-height: 1px;display: block; background-color: #fff; opacity: 0;"></iframe>
     <div class="d-flex space-between">
       <a href="https://data.larepublica.pe/" rel="noopener" style="display:inline-block;" target="_blank"
         class="a-header">
         <div id="w-sourceLogoDesktop" class="logo-desktop" style="display:block">
-          <img src="logo.png" style="width: 160px">
+          <img src="logo.png" style="width: 120px">
         </div>
         <div id="w-sourceLogoMobile" class="logo-mobile" style="display:none">
-          <img src="logo.png" style="width: 160px">
+          <img src="logo.png" style="width: 120px">
         </div>
       </a>
       <a href="https://www.connectas.org/" rel="noopener" style="display:inline-block;" target="_blank"
         class="a-header">
         <div id="w-sourceLogoDesktop" class="logo-desktop" style="display:block">
-          <img src="connectas-logo-white-300x117.png" style="width: 200px">
+          <img src="connectas-logo-white-300x117.png" style="width: 140px">
         </div>
         <div id="w-sourceLogoMobile" class="logo-mobile" style="display:none">
-          <img src="connectas-logo-white-300x117.png" style="width: 200px">
+          <img src="connectas-logo-white-300x117.png" style="width: 140px">
         </div>
       </a>
       <!-- <span>
@@ -653,25 +658,10 @@
         </div>
         <div class="texto-lr">
           <h5>Por: Roberth Orihuela Quequezana</h5>
+          <h5>Fotografía: Juan Carlos Cisneros Mamani</h5>
           <h6>Publicado el 21 de agosto de 2022</h6>
         </div>
       </div>
-      <!-- <div class="hero-image">
-        <div class="w-img">
-          <video style='min-width: 100%; min-height: 100%;' autoplay loop>
-            <source src="Ernesto gomez_2.mp4" type="video/mp4">
-          </video>
-        </div>
-    
-        <div class="opacity">&nbsp;</div>
-    
-        <div class="w-text">
-          <h1>
-            Pasivos ambientales, los residuos de la minería que nadie quiere asumir
-          </h1>
-          <h2>Pasivos ambientales, los residuos de la minería que nadie quiere asumir</h2>
-        </div>
-      </div> -->
 
       <div class="">
         <div class="gallery-wrap video">
@@ -1493,7 +1483,7 @@
       </p>
 
       <div class="texto-lr">
-        <iframe frameborder="0" class="juxtapose" width="100%" height="430"
+        <iframe frameborder="0" class="juxtapose" width="100%"
           src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=e1f6b864-16b9-11ed-b5bb-6595d9b17862"></iframe>
       </div>
 
@@ -1650,6 +1640,7 @@
       width: 100%;
       max-width: 1000px;
       margin: 0 auto;
+      text-align: center;
     }
 
     .d-flex {
@@ -1886,6 +1877,10 @@
       bottom: inherit !important;
     }
 
+    iframe.juxtapose {
+      min-height: 45vh;
+    }
+
     @media (max-width: 768px) {
       .gallery-wrap {
         height: 40vh;
@@ -2012,6 +2007,10 @@
         margin: 5px auto;
       }
 
+      iframe.juxtapose {
+        min-height: 20vh;
+      }
+
     }
 
     @media (min-width: 769px) {
@@ -2067,7 +2066,6 @@
 
     h5 {
       font-size: 14px;
-      margin-top: 30px;
       font-weight: bold;
     }
 
@@ -2119,6 +2117,15 @@
   </style>
   <footer style="background-color:#000">
     <div class="w-1000">
+      <span><i>"Pasivos ambientales: residuos de la minería que nadie quiere asumir"</i> es una investigación de:</span>
+      <div style="margin-top: 20px;">
+        <img src="logo.png" alt="LR Data" style="max-width: 140px; margin: 10px 5px 0;" />
+        <img src="connectas-logo-white-300x117.png" alt="CONNECTAS" style="max-width: 180px; margin: 0 5px;" />
+      </div>
+      <p>Con el apoyo de</p>
+      <img src="ICFJ-LOGO.png" alt="ICFJ"
+        style="max-width: 160px; margin-bottom: 30px; filter: brightness(0) invert(1);" />
+
       <span><strong>Redacción:</strong> Roberth Orihuela Quequezana</span>
       <span><strong>Fotografía:</strong> Juan Carlos Cisneros Mamani</span>
       <span><strong>Diseño:</strong> Jazmín Ceras Aguado</span>
@@ -2131,7 +2138,7 @@
       <span><strong>Desarrollo web:</strong> Anna Absi Drobkova</span>
       <span><strong>Coordinación:</strong> Milagros Requena Calderón</span>
       <br>
-      <span><i>"Pasivos ambientales: residuos de la minería que nadie quiere asumir"</i> es un trabajo realizado por
+      <span>Este trabajo fue realizado por
         Roberth Orihuela para La República y CONNECTAS, con el apoyo del International Center for Journalists (ICFJ) en
         el marco de la Iniciativa para el Periodismo de Investigación de las Américas.</span>
     </div>
