@@ -94,6 +94,18 @@ p .capitalLetter.bigger{height: 80px;margin: -2px 12px 0 -21px;}
   pointer-events: none;
 }
 
+.scrollytelling.infografia .stage .credit {
+  position: absolute;
+  background: #000;
+  min-width: 250px;
+  width: 20%;
+  padding: 10px;
+}
+
+.scrollytelling.infografia .stage .credit strong {
+  color: #fff;
+}
+
 .scrollytelling .content:not(.container) {
   margin-top: -100vh;
   padding: 0;
@@ -146,7 +158,9 @@ p .capitalLetter.bigger{height: 80px;margin: -2px 12px 0 -21px;}
   background: linear-gradient(0deg, rgba(243,242,232,1) 0%, rgba(243,242,232,0) 100%);
 }
 
-
+.mobile-only {
+  display: none;
+}
 
 
 @media screen and (min-width:768px) and (max-width:1007px){
@@ -188,6 +202,14 @@ p .capitalLetter.bigger{height: 80px;margin: -2px 12px 0 -21px;}
   }
   .scrollytelling .content .s-slide .s-card {
     width: 91.6666%;
+  }
+
+  .mobile-only {
+    display: block;
+  }
+
+  .desktop-only {
+    display: none;
   }
 
 }
