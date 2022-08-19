@@ -1560,6 +1560,10 @@
       color: black;
     }
 
+    a:hover {
+      color: #F2B50C;
+    }
+
     html {
       -ms-text-size-adjust: 100%;
       font-size: 62.5%;
@@ -1752,7 +1756,7 @@
       font-size: 1.8rem;
       font-family: Inter, sans-serif;
       width: 100%;
-      margin: 0 auto 25px;
+      margin: 50px auto 25px;
       max-width: 750px;
       font-weight: bold;
       line-height: 1.25;
@@ -1987,7 +1991,7 @@
       }
 
       h3 {
-        margin: 0 auto 15px;
+        margin: 40px auto 15px;
         padding: 0 15px;
       }
 
@@ -2106,8 +2110,9 @@
     .texto-lr {
       max-width: 750px;
       margin: 0 auto 25px;
-      line-height: 1.38;
+      line-height: 1.5;
       display: block;
+      font-size: 16px;
     }
 
     .texto-lr small {
@@ -2131,7 +2136,7 @@
       <span><strong>Diseño:</strong> Jazmín Ceras Aguado</span>
       <span><strong>Redes sociales:</strong> Claudia Beltrán Apaza y Pilar López Manrique</span>
       <span><strong>Edición:</strong> Carlos Gutiérrez Bracho</span>
-      <span><strong>Acompañamiento editorial:</strong> Equipo CONNECTAS</span>
+      <span><strong>Acompañamiento editorial:</strong><a href="https://www.connectas.org/equipo-connectas/" style="text-decoration: none;" target="_blank"> Equipo CONNECTAS</a></span>
       <br>
       <span>Con el apoyo de la unidad LR Data de La República</span>
       <br>
@@ -2197,8 +2202,6 @@
       console.log(top);
     }
     (document.onscroll = function () {
-      // window.scrollY >= 7 || window.pageYOffset >= 7
-      //document.getElementById("portada-cover").scrollIntoView()
       window.scrollY >= $('#portada-cover').offset().top
         ? (h.classList.add("sticky-gray"),
           sourceLogoDesktop.setAttribute("style", "display:none"),
