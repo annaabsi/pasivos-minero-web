@@ -389,7 +389,7 @@
       top: 70vh;
       opacity: 0;
       transition: 0.8s ease;
-      font-size: 12px;
+      font-size: 14px;
       line-height: 1.25;
       padding: 10px;
       text-align: center;
@@ -531,10 +531,10 @@
       <a href="https://data.larepublica.pe/" rel="noopener" style="display:inline-block;" target="_blank"
         class="a-header">
         <div id="w-sourceLogoDesktop" class="logo-desktop" style="display:block">
-          <img src="logo.png" style="width: 120px">
+          <img src="logo.png" style="width: 120px; margin-top: 5px;">
         </div>
         <div id="w-sourceLogoMobile" class="logo-mobile" style="display:none">
-          <img src="logo.png" style="width: 120px">
+          <img src="logo.png" style="width: 120px; margin-top: 5px;">
         </div>
       </a>
       <a href="https://www.connectas.org/" rel="noopener" style="display:inline-block;" target="_blank"
@@ -625,7 +625,7 @@
   </div>
   <!-- Ends Scrollytelling -->
 
-  <section class="cover">
+  <section class="cover" id="portada-cover">
 
     <div class="logos">
       <a href="https://larepublica.pe/" target="_blank"><img class="LaRepublica" src="media/images/la-republica.svg"
@@ -1993,6 +1993,7 @@
 
       .item span {
         text-align: left;
+        font-size: 12px;
       }
 
       .gallery-wrap.video {
@@ -2010,7 +2011,6 @@
       iframe.juxtapose {
         min-height: 20vh;
       }
-
     }
 
     @media (min-width: 769px) {
@@ -2129,7 +2129,7 @@
       <span><strong>Redacción:</strong> Roberth Orihuela Quequezana</span>
       <span><strong>Fotografía:</strong> Juan Carlos Cisneros Mamani</span>
       <span><strong>Diseño:</strong> Jazmín Ceras Aguado</span>
-      <span><strong>Redes sociales:</strong> Claudia Beltrán Apaza</span>
+      <span><strong>Redes sociales:</strong> Claudia Beltrán Apaza y Pilar López Manrique</span>
       <span><strong>Edición:</strong> Carlos Gutiérrez Bracho</span>
       <span><strong>Acompañamiento editorial:</strong> Equipo CONNECTAS</span>
       <br>
@@ -2189,8 +2189,17 @@
             (endImg[t][o] = initImg[t][o] + parrafFixed[t][o].offsetHeight);
       });
     }
+    function getOffset(el) {
+      return {
+        left: window.scrollX,
+        top: window.scrollY
+      };
+      console.log(top);
+    }
     (document.onscroll = function () {
-      window.scrollY >= 5500 || window.pageYOffset >= 5500
+      // window.scrollY >= 7 || window.pageYOffset >= 7
+      //document.getElementById("portada-cover").scrollIntoView()
+      window.scrollY >= $('#portada-cover').offset().top
         ? (h.classList.add("sticky-gray"),
           sourceLogoDesktop.setAttribute("style", "display:none"),
           sourceLogoMobile.setAttribute("style", "display:block"),
